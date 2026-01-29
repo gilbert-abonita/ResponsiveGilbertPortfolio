@@ -852,39 +852,90 @@ textarea {
         transform: translateY(0);
         transition: all 1s;
     }
-    /* portfolio section */
-    .portfolio {
-        margin-block: 10% 4%;
-        margin-inline: var(--margin-padding);
-    }
-    .portfolio h4 {
-        text-align: center;
-        font-size: 20px;
-        color: var(--btn-clr);
-        margin-block: 10px;
-    }
-    .portfolio h1 {
-        text-align: center;
-        font-size: 30px;
-    }
-    .Portfolio-cards {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .Portfolio-cards .cards {
-        display: block;
-        padding: 0px;
-        width: 100%;
-    }
-    .cards button {
-        margin-block: 8px 13px;
-        font-size: 1.3rem;
-        padding: 7px 18px;
-    }
-    .cards:hover {
-        animation-name: shake;
-        animation-duration: 2s;
-    }
+   /* Portfolio Section */
+.portfolio {
+    margin-block: 10% 4%;
+    text-align: center;
+}
+
+.portfolio h4 {
+    font-size: 20px;
+    color: #5252D4;
+    margin-bottom: 10px;
+}
+
+.portfolio h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+/* Centered Cards */
+.Portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;           /* wrap multiple rows */
+    justify-content: center;   /* center horizontally */
+    gap: 30px;                 /* space between cards */
+}
+
+/* Individual Card */
+/* Portfolio Card Width Adjustment */
+.Portfolio-cards .cards {
+    width: 345px;  /* increase width */
+    padding: 49px 25px; /* adjust padding to match */
+    text-align: center;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Card Image (Logo) */
+.cards img {
+    width: 80px;               /* bigger logo size */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;  /* center the image */
+}
+
+/* Card Text */
+.card-text h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    font-size: 0.9rem;
+    color: var(--gray-clr);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* Card Button */
+.cards button {
+    margin-block: 8px 0px;
+    font-size: 1.2rem;
+    padding: 7px 18px;
+    background-color: #fff;
+    color: var(--black-clr);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cards button:hover {
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+/* Card Hover Effect */
+.cards:hover {
+    transform: scale(1.05);  /* gentle zoom like service boxes */
+}
+
     .portfolio .fade-in {
         opacity: 0;
         transition: all 1s;
@@ -963,5 +1014,56 @@ textarea {
         width: 400px;
     }
 }
+/* SERVICE BOX LAYOUT */
+.service-boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+/* BOX STYLE */
+.box {
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT (no shaking) */
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* LOGOS LANDSCAPE */
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tech-logos img {
+    width: 80px;  /* bigger size */
+    height: auto;
+}
+
+/* SMOOTH FADE IN */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
